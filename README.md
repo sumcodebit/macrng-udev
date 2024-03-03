@@ -12,11 +12,6 @@ randomizes your MAC address for unicast address space (device-to-device)
 
 	change index number, owner and/or permissions if needed.
 
-	> [!NOTE]
-	> default locations for `udev` rules are found in:
-	> system wide rules:  `/usr/lib/udev/rules.d/` and `/usr/local/lib/udev/rules.d/`
-	> custom rules for local administration:  `/etc/udev/rules.d/`
-
 2. add the file `macrng.sh` into `/usr/local/bin/`
 
 	or any other favourite place which is part of your `$PATH` environment variable;
@@ -28,11 +23,15 @@ randomizes your MAC address for unicast address space (device-to-device)
 	sudo udevadm control --reload-rules
 	```
 	you may want to trigger `udev` to apply the rules to all existing devices or a specific one
-	<br\>or manually reconnect them
+	<br/>or manually reconnect them
 	```sh
 	sudo udevadm trigger
 	sudo udevadm trigger --attr-match=vendor='VENDOR' --attr-match=model='MODEL'
 	```
+> [!NOTE]
+> default locations for `udev` rules are found in: <br/>
+> system wide rules:  `/usr/lib/udev/rules.d/` and `/usr/local/lib/udev/rules.d/` <br/>
+> custom rules for local administration:  `/etc/udev/rules.d/` <br/>
 
 ## usage
 
