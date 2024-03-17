@@ -40,5 +40,6 @@ install and forget about it.
 when `udev` detects any addition of a net interface, the script will randomize its MAC address.
 
 excluded interface names are:
-	- loopback:		`lo*`
-	- wireguard:	`wg*`
+
+- loopback:		`lo*`
+- wireguard:	`wg*`
